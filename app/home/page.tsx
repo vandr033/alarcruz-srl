@@ -32,6 +32,10 @@ export default function PricingPage() {
                 ))}		
 				</div>
 		</section>
+		{/* <div className=" flex-row w-screen bg-black items-center text-center pb-24 pt-5">
+			<h1 className={title({size:'cardTitle', color:'white'})}>LLame al </h1><h1 className={title({size:'cardTitle', color:'green'})}>3558544 </h1><h1 className={title({size:'cardTitle', color:'white'})}> para obtener una cotizacion gratuita</h1>
+
+		</div> */}
 	<section className="flex justify-center items-center h-80 md:h-[22rem] lg:h-[24rem] xl:h-[26rem] 2xl:h-[29rem] bg-black">
   		<div className="h-72 md:h-80 lg:h-[22rem] xl:h-96 2xl:h-[26rem] w-[90%] bg-white rounded-lg flex items-center">
     		{/* Left side with image */}
