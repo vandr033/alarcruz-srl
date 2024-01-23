@@ -42,7 +42,10 @@ export default function RootLayout({
 						
 					</div>
 				</Providers> */}
+				<section>
+					<Navbar/>
 				<main>{children}</main>
+				</section>
 		</html>
 	);
 }

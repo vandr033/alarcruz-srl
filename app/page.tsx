@@ -1,46 +1,85 @@
-import { Link } from "@nextui-org/link";
-import { Snippet } from "@nextui-org/snippet";
-import { Code } from "@nextui-org/code"
-import { button as buttonStyles } from "@nextui-org/theme";
-import { siteConfig } from "@/config/site";
-import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
-import Footer from "../components/footer/footer";
-import bg from "@/public/assets/bg.png";
+"use client"
+import Footer from "@/components/footer/footer";
+import { title } from "@/components/primitives";
+import { Navbar } from "@nextui-org/navbar";
 import Image from "next/image";
-let width= 375;
-let height = 375;
-export default function Home() {
-	return (<div>
+import logo from "@/public/assets/Logopng.png"
+import empresas from "@/public/assets/empresas.svg"
+import Tailwindcards from "@/components/tailwindcards";
+let sources =[
+"/assets/logos-empresas/bg.svg",
+"/assets/logos-empresas/carrasco.svg",
+"/assets/logos-empresas/fidalga.svg",
+"/assets/logos-empresas/LOGO_CASA_ELENA_nuevo_200x.svg",
+"/assets/logos-empresas/Multicenter-Logo-Header-Desktop___b1ce8cba76335a12f517ff3bdd335957-svg.svg"
+]
+export default function PricingPage() {
+	return (
 		
-		<section className=" flex flex-col items-end max-w-[90%] justify-end pt-8 mt-24 mb-4 md:pt-10 bg-[#f0f0f0]">
-			<div className="text-right items-end pb-1 mb-0 leading-[.2]">
-				<h1 className={title({ color: "green", size:"xxl" })}>Alarcruz</h1>
-			</div>
-			<div className="text-right justify-start  pt-0 mt-0">
-			<h1 className="text-black text-2xl">Especialistas en Monitoreo de Alarmas</h1>
-
-			</div>
-			</section>
-
-			<div className=" max-w-lg justify-start flex flex-row items-start">
-			<Image src="/assets/logos-empresas/baneco.svg" alt="" width={width} height={height}/>	
-			<Image src="/assets/logos-empresas/bg.svg" alt="" width={width} height={height}/>	
-			<Image className=" pl-12" src="/assets/logos-empresas/fidalga.svg" alt="" width={width} height={height}/>	
-			<Image src="/assets/logos-empresas/LOGO_CASA_ELENA_nuevo_200x.svg" alt="" width={width} height={height}/>	
-			<Image className="pt-4 pl-12" src="/assets/logos-empresas/Multicenter-Logo-Header-Desktop___b1ce8cba76335a12f517ff3bdd335957-svg.svg" alt="" width={500} height={500}/>	
-			</div>
-			<section className=" flex flex-col items-start justify-end gap-4  bg-[#f0f0f0] pr-32 mt-20 mb-40">
-
-			</section>
-		<div className=" flex-row w-screen bg-black items-center text-center py-24">
-			<h1 className={title({size:'sm', color:'white'})}>LLame al </h1><h1 className={title({size:'sm', color:'green'})}>3558544 </h1><h1 className={title({size:'sm', color:'white'})}> para obtener una cotizacion gratuita</h1>
+		<div>
+		<section className="flex-col w-full h-full pr-10 gap-0 flex-grow">
+<div className="flex md:flex md:flex-grow flex-row-reverse space-x-1 leading-[.85]">
+      <h1 className= {title({ color: "green", size: "Alarcruz" })} >Alarcruz</h1>
 
 		</div>
-					{/* <Footer /> */}
-					
-	</div>
+		<div className="flex md:flex md:flex-grow flex-row-reverse space-x-1 leading-[.85]">
+      <h1 className= {title({ color: "black", size: "subheading" })} >Monitoreo de alarmas las 24 horas</h1>
+		</div>
+		<div className=" max-w-screen justify-start flex flex-row items-start ">
+		{sources.map((source, index) => (
+					< div key={index} className="relative h-32 w-32 sm:h-48 sm:48 md:h-45 md:w-60 lg:w-72 lg:h-60 xl:w-80 xl:h-70 2xl:h-90 2xl:w-96">
+                        <Image   src={source} alt="" objectFit="true" fill />
+						</div>
 
-		
-	);
+                ))}		
+				</div>
+		</section>
+		{/* <div className=" flex-row w-screen bg-black items-center text-center pb-24 pt-5">
+			<h1 className={title({size:'cardTitle', color:'white'})}>LLame al </h1><h1 className={title({size:'cardTitle', color:'green'})}>3558544 </h1><h1 className={title({size:'cardTitle', color:'white'})}> para obtener una cotizacion gratuita</h1>
+
+		</div> */}
+	<section className="flex justify-center items-center h-80 md:h-[22rem] lg:h-[24rem] xl:h-[26rem] 2xl:h-[29rem] bg-black">
+  		<div className="h-72 md:h-80 lg:h-[22rem] xl:h-96 2xl:h-[26rem] w-[90%] bg-white rounded-lg flex items-center">
+    		{/* Left side with image */}
+    			<div className="flex-shrink-0 p-4 w-1/2 2xl:mt-28 xl:mt-20 lg:mt-16">
+      				<Image src={logo} alt="Image" className="h-full w-full object-cover rounded" />
+    			</div>
+    		{/* Right side with text */}
+    			<div className="flex-grow p-4 w-1/2 flex-col items-start h-72 md:h-80 lg:h-[22rem] xl:h-96 2xl:h-[26rem]">
+      				<h1 className={title({size:'cardTitle', color:'green'})}>Expertos En Monitoreo De Alarmas</h1>
+					<p className=" text-[.65rem] sm:text-[.85rem] md:text-base lg:text-xl xl:text-2xl 2xl:text-3xl text-black">
+Alarcruz ofrece servicios de monitoreo de alarmas para hogares y empresas en Santa Cruz con más de 20 años de experiencia. Garantizamos protección 24/7 contra robos, con respuesta inmediata y despacho de patrullas. Brindamos soluciones de seguridad personalizadas. Si buscas un cambio, contáctanos para una evaluación sin compromiso en 24 horas.</p>
+    			</div>
+  		</div>
+	</section>
+	<section className="flex justify-center items-center h-80 md:h-[22rem] lg:h-[24rem] xl:h-[26rem] 2xl:h-[29rem] bg-green-500">
+  		<div className="h-72 md:h-80 lg:h-[22rem] xl:h-96 2xl:h-[26rem] w-[90%] bg-black rounded-lg flex items-center">
+    		{/* Left side with image */}
+    			<div className="flex-shrink-0 p-4 w-1/2   ">
+      				<Image src={empresas} alt="Image" className="h-full w-full lg:w-[65%] object-cover rounded" />
+    			</div>
+    		{/* Right side with text */}
+    			<div className="flex-grow p-4 w-1/2 flex-col items-start h-72 md:h-80 lg:h-[22rem] xl:h-96 2xl:h-[26rem]">
+      				<h1 className={title({size:'cardTitle', color:'green'})}>Expertos En Monitoreo De Alarmas</h1>
+					<p className=" text-[.65rem] sm:text-[.85rem] md:text-base lg:text-xl xl:text-2xl 2xl:text-3xl text-white">
+Alarcruz ofrece servicios de monitoreo de alarmas para hogares y empresas en Santa Cruz con más de 20 años de experiencia. Garantizamos protección 24/7 contra robos, con respuesta inmediata y despacho de patrullas. Brindamos soluciones de seguridad personalizadas. Si buscas un cambio, contáctanos para una evaluación sin compromiso en 24 horas.</p>
+    			</div>
+  		</div>
+	</section>
+	<div className="flex items-center justify-center">
+  <h1 className="text-center text-4xl mt-6">Los Que Confian en Nosotros</h1>
+</div>
+
+	<section className=" p-12">
+		<Tailwindcards/>
+	</section>
+
+		<Footer/>
+		</div>
+);
 }
+	  // 'sm': '640px',
+      //'md': '768px',
+      //'lg': '1024px',
+      //'xl': '1280px',
+      //'2xl': '1536px',

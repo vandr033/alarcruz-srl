@@ -20,7 +20,6 @@ export default function homeLayout({
 					</div>
 				</Providers> */
                 <section>		
-                <Navbar/>
 				<main>{children}</main>
                 </section>
 	);
