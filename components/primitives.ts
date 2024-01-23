@@ -4,6 +4,8 @@ export const title = tv({
 	base: "tracking-tight inline font-semibold",
 	variants: {
 		color: {
+			white:'text-white',
+			black: "text-black",
 			violet: "from-[#FF1CF7] to-[#b249f8]",
 			yellow: "from-[#FF705B] to-[#FFB457]",
 			blue: "from-[#5EA2EF] to-[#0072F5]",
@@ -13,13 +15,26 @@ export const title = tv({
 			foreground: "dark:from-[#FFFFFF] dark:to-[#4B4B4B]",
 		},
 		size: {
+			xxs: "text-[.5rem] ",
 			sm: "text-3xl lg:text-4xl",
 			md: "text-[2.3rem] lg:text-5xl leading-9",
 			lg: "text-4xl lg:text-6xl",
+			xl: "text-8xl lg:text-9xl",
+			xxl: "text-[10rem] lg:text-[11rem]",
+			Alarcruz: "text-7xl xs:text-8xl md:text-9xl lg:text-[10rem] xl:text-[12rem] 2xl:text-[16rem] mt-24",
+			subheading: "text-sm xs:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl mb-5",
+			cardTitle: "text-sm xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl",
+			//xs: '480px',
+			// 'sm': '640px',
+      //'md': '768px',
+      //'lg': '1024px',
+      //'xl': '1280px',
+      //'2xl': '1536px',
 		},
 		fullWidth: {
 			true: "w-full block",
 		},
+
 	},
 	defaultVariants: {
 		size: "md",
@@ -40,12 +55,19 @@ export const title = tv({
 	],
 });
 
+
 export const subtitle = tv({
 	base: "w-full md:w-1/2 my-2 text-lg lg:text-xl text-default-600 block max-w-full",
 	variants: {
+		color: {
+		black: "text-black",
+		},
 		fullWidth: {
 			true: "!w-full",
 		},
+		size: {
+			sm:"text-35xl"
+		}
 	},
   defaultVariants:{
     fullWidth: true
