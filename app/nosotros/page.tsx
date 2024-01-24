@@ -1,45 +1,111 @@
-import React from 'react';
-
-const Team = () => {
+import React from "react";
+import {Card, CardHeader, CardBody, CardFooter} from "@nextui-org/card";
+import Image from "next/image";
+import logo from "@/public/assets/Logopng.png";
+export default function App() {
   return (
-    <div className="bg-white py-6 sm:py-8 lg:py-12">
-      <div className="mx-auto max-w-screen-xl px-4 md:px-8">
-        {/* text - start */}
-        <div className="mb-10 md:mb-16">
-          <h2 className="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">Meet our Team</h2>
-
-          <p className="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">
-            This is a section of some simple filler text, also known as placeholder text. It shares some characteristics
-            of a real written text but is random or otherwise generated.
-          </p>
-        </div>
-        {/* text - end */}
-
-        <div className="grid grid-cols-2 gap-x-4 gap-y-6 sm:gap-y-8 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-12">
-          {/* person - start */}
-          <div className="flex flex-col items-center gap-2 sm:flex-row md:gap-4">
-            <div className="h-24 w-24 overflow-hidden rounded-full bg-gray-100 shadow-lg md:h-32 md:w-32">
-              <img
-                src="https://images.unsplash.com/photo-1567515004624-219c11d31f2e??auto=format&q=75&fit=crop&w=256"
-                loading="lazy"
-                alt="Photo by Radu Florin"
-                className="h-full w-full object-cover object-center rounded-full"
-              />
-            </div>
-
-            <div>
-              <div className="text-center font-bold text-indigo-500 sm:text-left md:text-lg">John McCulling</div>
-              <p className="text-center text-sm text-gray-500 sm:text-left md:text-base">Founder / CEO</p>
-            </div>
-          </div>
-          {/* person - end */}
-
-          {/* Add similar code blocks for other team members */}
-
-        </div>
+	<div>
+		{/* Title Section */}
+		<div className="text-center mb-6">
+        <h2 className="text-3xl font-bold">Quienes Son Los Que te Protegen:</h2>
       </div>
-    </div>
-  );
-};
 
-export default Team;
+      {/* Image that spans the entire width */}
+      <div className="mb-6">
+        {/* <Image
+          alt="Banner Image"
+          className="object-cover w-full h-48 rounded-xl"
+          src={yourBannerImage}
+        /> */}
+      </div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-4">
+  <Card className="py-4">
+    <CardBody className="overflow-visible py-2">
+      <Image
+        alt="Card background"
+        className="object-cover rounded-xl"
+        src={logo}
+        width={270}
+      />
+    </CardBody>
+    <CardFooter className="pb-0 pt-2 px-4 flex-col items-start">
+      <h4 className="font-bold text-large">Victor Andrade</h4>
+      <p className="text-tiny uppercase font-bold">CEO/Dueño</p>
+    </CardFooter>
+  </Card>
+  <Card className="py-4">
+    <CardBody className="overflow-visible py-2">
+      <Image
+        alt="Card background"
+        className="object-cover rounded-xl"
+        src={logo}
+        width={270}
+      />
+    </CardBody>
+    <CardFooter className="pb-0 pt-2 px-4 flex-col items-start">
+      <h4 className="font-bold text-large">Victor Andrade</h4>
+      <p className="text-tiny uppercase font-bold">CEO/Dueño</p>
+    </CardFooter>
+  </Card>
+  <Card className="py-4">
+    <CardBody className="overflow-visible py-2">
+      <Image
+        alt="Card background"
+        className="object-cover rounded-xl"
+        src={logo}
+        width={270}
+      />
+    </CardBody>
+    <CardFooter className="pb-0 pt-2 px-4 flex-col items-start">
+      <h4 className="font-bold text-large">Victor Andrade</h4>
+      <p className="text-tiny uppercase font-bold">CEO/Dueño</p>
+    </CardFooter>
+  </Card>
+  <Card className="py-4">
+    <CardBody className="overflow-visible py-2">
+      <Image
+        alt="Card background"
+        className="object-cover rounded-xl"
+        src={logo}
+        width={270}
+      />
+    </CardBody>
+    <CardFooter className="pb-0 pt-2 px-4 flex-col items-start">
+      <h4 className="font-bold text-large">Victor Andrade</h4>
+      <p className="text-tiny uppercase font-bold">CEO/Dueño</p>
+    </CardFooter>
+  </Card>
+  <Card className="py-4">
+    <CardBody className="overflow-visible py-2">
+      <Image
+        alt="Card background"
+        className="object-cover rounded-xl"
+        src={logo}
+        width={270}
+      />
+    </CardBody>
+    <CardFooter className="pb-0 pt-2 px-4 flex-col items-start">
+      <h4 className="font-bold text-large">Victor Andrade</h4>
+      <p className="text-tiny uppercase font-bold">CEO/Dueño</p>
+    </CardFooter>
+  </Card>
+  <Card className="py-4">
+    <CardBody className="overflow-visible py-2">
+      <Image
+        alt="Card background"
+        className="object-cover rounded-xl"
+        src={logo}
+        width={270}
+      />
+    </CardBody>
+    <CardFooter className="pb-0 pt-2 px-4 flex-col items-start">
+      <h4 className="font-bold text-large">Victor Andrade</h4>
+      <p className="text-tiny uppercase font-bold">CEO/Dueño</p>
+    </CardFooter>
+  </Card>
+  
+</div>
+</div>
+
+  );
+}

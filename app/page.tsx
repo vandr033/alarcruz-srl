@@ -6,6 +6,8 @@ import Image from "next/image";
 import logo from "@/public/assets/Logopng.png"
 import empresas from "@/public/assets/empresas.svg"
 import Tailwindcards from "@/components/tailwindcards";
+import Testimonials from "@/components/testimonials";
+import Contact from "@/components/contact";
 let sources =[
 "/assets/logos-empresas/bg.svg",
 "/assets/logos-empresas/carrasco.svg",
@@ -38,6 +40,9 @@ export default function PricingPage() {
 			<h1 className={title({size:'cardTitle', color:'white'})}>LLame al </h1><h1 className={title({size:'cardTitle', color:'green'})}>3558544 </h1><h1 className={title({size:'cardTitle', color:'white'})}> para obtener una cotizacion gratuita</h1>
 
 		</div> */}
+		<section>
+			<Contact/>
+		</section>
 	<section className="flex justify-center items-center h-80 md:h-[22rem] lg:h-[24rem] xl:h-[26rem] 2xl:h-[29rem] bg-black">
   		<div className="h-72 md:h-80 lg:h-[22rem] xl:h-96 2xl:h-[26rem] w-[90%] bg-white rounded-lg flex items-center">
     		{/* Left side with image */}
@@ -66,15 +71,12 @@ Alarcruz ofrece servicios de monitoreo de alarmas para hogares y empresas en San
     			</div>
   		</div>
 	</section>
-	<div className="flex items-center justify-center">
-  <h1 className="text-center text-4xl mt-6">Los Que Confian en Nosotros</h1>
-</div>
+
 
 	<section className=" p-12">
-		<Tailwindcards/>
+		<Testimonials/>
 	</section>
 
-		<Footer/>
 		</div>
 );
 }
